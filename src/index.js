@@ -16,7 +16,10 @@ class ChartComponent extends React.Component {
     getDatasetAtEvent: PropTypes.func,
     getElementAtEvent: PropTypes.func,
     getElementsAtEvent: PropTypes.func,
-    height: PropTypes.number,
+    height: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string
+    ]),
     legend: PropTypes.object,
     onElementsClick: PropTypes.func,
     options: PropTypes.object,
@@ -30,7 +33,10 @@ class ChartComponent extends React.Component {
         );
       }
     },
-    width: PropTypes.number,
+    width: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string
+    ]),
     datasetKeyProvider: PropTypes.func
   }
 

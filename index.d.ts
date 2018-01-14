@@ -19,12 +19,12 @@ export interface ChartComponentProps {
   getDatasetAtEvent?(e: any): void;
   getElementAtEvent?(e: any): void;
   getElementsAtEvent?(e: any): void;
-  height?: number;
+  height?: number | string;
   legend?: chartjs.ChartLegendOptions;
   onElementsClick?(e: any): void; // alias for getElementsAtEvent (backward compatibility)
   options?: chartjs.ChartOptions;
   redraw?: boolean;
-  width?: number;
+  width?: number | string;
 }
 
 export interface LinearComponentProps extends ChartComponentProps {
